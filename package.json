@@ -1,6 +1,6 @@
 {
-  "homepage": "https://anjibabu9985.github.io/todo/",
-  "name": "myapp",
+  
+  "name": "nodejs",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,6 +19,17 @@
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
+  "engines": {
+    "node": "4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pranidisai/nodejs.git"
+  },
+  "keywords": [
+    "node",
+    "pranidisai",
+    "express"
   "eslintConfig": {
     "extends": "react-app"
   },
