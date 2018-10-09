@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/pop-sign.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style> 
+form {
+  width: 300px;
+  margin: 20px auto;
+}
+
+fieldset {
+  position: relative;
+  border: none;  
+}
+
+label {
+  position: absolute;  
+  top: 18px;
+  color: rgba(0, 0, 0, 0.3);
+  transform-origin: left;
+  transition: all 0.3s ease;
+}
+
+input:focus ~ label {
+  color: red;  
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  top: 0;
+  transform: scale(0.6, 0.6);
+}
+
+input {
+  font-size: 20px;  
+  width: 100%;
+  border: none;  
+  margin-top: 10px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.after {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, red 50%, transparent 50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: all 0.6s ease;
+}
+
+input:focus ~ .after {
+background-position: 0 0;
+}
+
+</style>
+</head>
+<body>
+
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn" class="btn btn-primary">SIGN IN/ SIGN UP</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content" style="border-radius: none;">
+    <span class="close"></span>
+	
+     <!--  Sign Up  -->
+    <section class="section sign-up" style="height: 330px;">
+      <div class="trapezoid"></div>
+	  <img src="http://agasthyaapplabs.com/joey/images/page3/room.jpg" class="img1">
+	  <form action="#" autocomplete="off">
+    <fieldset>
+      <input id="first" type="text" name="first" required>
+      <label for="first">First Name</label>
+      <div class="after"></div>
+    </fieldset>
+	<fieldset>
+      <input id="last" type="password" name="last" required>
+      <label for="last">Phone</label>
+      <div class="after"></div>
+    </fieldset>
+	<div class="col-md-12">
+  <p style="margin-left: 30px;">OR SIGN UP <a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-google"></a>
+</p>
+  </div>
+    
+ 
+		<div class="col-md-6">
+        <p class="opposite-btn2">SIGN UP</p>
+		</div>
+		<div class="col-md-6">
+		<input type="button" class="submit" value="SIGN IN">
+		</div>
+		 </form>
+    </section>
+    
+    <!--  Sign In  -->
+    <section class="section sign-in" style="height: 540px;">
+	<img src="http://agasthyaapplabs.com/joey/images/page3/room.jpg" class="img2">
+      <form action="#" autocomplete="off">
+    <fieldset>
+      <input id="first" type="text" name="first" required>
+      <label for="first">First Name</label>
+      <div class="after"></div>
+    </fieldset>
+    <fieldset>
+      <input id="last" type="text" name="last" required>
+      <label for="last">Phone</label>
+      <div class="after"></div>
+    </fieldset>
+	<fieldset>
+      <input id="last" type="text" name="last" required>
+      <label for="last">Email</label>
+      <div class="after"></div>
+    </fieldset>
+	<fieldset>
+      <input id="last" type="password" name="last" required>
+      <label for="last">Phone</label>
+      <div class="after"></div>
+    </fieldset>
+	<fieldset>
+      <input id="last" type="password" name="last" required>
+      <label for="last">Password</label>
+      <div class="after"></div>
+    </fieldset>
+	<fieldset>
+      <input id="last" type="password" name="last" required>
+      <label for="last">Confirm Password</label>
+      <div class="after"></div>
+    </fieldset>
+  <div class="col-md-6">
+  
+  </div>
+  <div class="col-md-6">
+  <p>OR SIGN UP <a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-google"></a>
+</p>
+  </div>
+	  <div class="col-md-6">
+	  <input type="button" class="submit1" value="SIGN UP">
+	  </div>
+	  <div class="col-md-6">
+        <p class="opposite-btn1" style="margin-top: 15px; margin-left: 100px;">SIGN IN</p>
+		</div>
+		</form>
+    </section>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+
+
+<script>
+const signUp = document.querySelector('.sign-up');
+const signIn = document.querySelector('.sign-in');
+
+// Switch btns: there are two only because I was in a hurry a didn't want to write all the javascript immediately. In a production environment, a better solution would be implemented.
+const btn1 = document.querySelector('.opposite-btn1');
+const btn2 = document.querySelector('.opposite-btn2');
+
+
+// Switches to 'Create Account'
+btn1.addEventListener('click', () => {
+  signUp.style.display = 'block';
+  signIn.style.display = 'none'; 
+});
+
+// Switches to 'Sign In'
+btn2.addEventListener('click', () => {
+  signUp.style.display = 'none';
+  signIn.style.display = 'block';
+});
+</script>
+</body>
+</html>
