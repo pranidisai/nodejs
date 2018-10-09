@@ -30,4 +30,6 @@
     "node",
     "pranidisai",
     "express"
-  
+  ],
+  "license": "MIT"
+}
